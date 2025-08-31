@@ -75,6 +75,25 @@ function evennumber(arr) {
 }
 evennumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).then((v) => { console.log(v); });
 //10. Use .finally() to log "Done" when a Promise finishes (success or failure).
-simulateTask1(500, "Ok")
-    .then((rs) => { console.log(rs); })
-    .catch((err) => { console.log(err); });
+function doHomework(success) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (success) {
+                resolve("Bài tập đã hoàn thành!");
+            }
+            else {
+                reject("Bài tập bị lỗi rồi!");
+            }
+        }, 1000);
+    });
+}
+doHomework(true)
+    .then(result => {
+    console.log("Kết quả:", result);
+})
+    .catch(error => {
+    console.log("Lỗi:", error);
+})
+    .finally(() => {
+    console.log("Done");
+});
