@@ -8,6 +8,7 @@ import Screen04 from './Components/screen04';
 import Screen05 from './Components/screen05';
 import Screen06 from './Components/screen06';
 import Screen07 from './Components/screen07';
+import Screen08 from './Components/screen08';
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
    {/* <Screen04/> */}
    {/* <Screen05/> */}
    {/* <Screen06/> */}
-   <Screen07/>
+   {/* <Screen07/> */}
+   <Screen08/>
    </SafeAreaProvider>
   );
 }
